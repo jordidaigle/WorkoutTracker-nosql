@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const express = require('express');
 const logger = require('morgan');
 
@@ -21,7 +21,7 @@ app.use(express.static("public"));
 
 // Require Routes
 // app.use(require("./routes/api.js"));
-// app.use(require("./routes/views.js"));
+app.use(require("./routes/views.js"));
 
 // Init PORT listener
 app.listen(PORT, () => {

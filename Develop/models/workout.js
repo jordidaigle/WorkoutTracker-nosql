@@ -3,21 +3,21 @@ const Schema=mongoose.Schema;
 
 const schemaWorkout=new Schema({
 
-    Day: {
+    day: {
         type: Date,
         default: Date.now
-    };
+    },
 
-    Exercises: [{
-        Name: {
-            type: String,
-            trim: true,
-            required: "Name is Required"
-        },
-
+    exercises: [{
+        
         type: {
             type: String,
             required: "Type of exercise is Required"
+        },
+        name: {
+            type: String,
+            trim: true,
+            required: "Name is Required"
         },
         weight: {
             type: Number,
@@ -46,4 +46,4 @@ const schemaWorkout=new Schema({
 
 const Workout=mongoose.model("Workout",schemaWorkout);
 
-module.exports=Workout;
+module.exports= Workout;

@@ -1,9 +1,8 @@
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html,
@@ -17,20 +16,17 @@ body {
 }
 
 nav {
-  background-color: #5793fd;
-  color: #ffffff;
-  height: 80px;
-  padding: 10px;
-  line-height: 3;
   font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
-a,
+
+
 a:hover,
 a:active,
 a:visited {
-  text-decoration: none;
-  color: inherit;
+  color: red;
 }
 
 header {
@@ -92,11 +88,10 @@ input {
   border: 1px solid #aaa;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
 }
 
 .wrapper {
-  background-color: #f2f8ff;
+  background-color: rgb(9, 9, 9);
   padding-bottom: 100px;
 }
 
@@ -155,7 +150,7 @@ button {
   border-radius: 6px;
   border: 1px solid #aaa;
   padding: 10px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-color: black;
 }
 
 #toast {
@@ -218,7 +213,6 @@ button {
   border-radius: 6px;
   border: 1px solid #aaa;
   padding: 10px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
 }
 
 #toast {
@@ -279,7 +273,6 @@ button {
   border-radius: 6px;
   border: 1px solid #aaa;
   padding: 10px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
 }
 
 #toast {
@@ -311,15 +304,13 @@ button {
   display: none;
 }
 
-.btn,
-button {
+.btn {
   display: block;
   cursor: pointer;
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #aaa;
   padding: 10px;
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
 }
 
 form > button {

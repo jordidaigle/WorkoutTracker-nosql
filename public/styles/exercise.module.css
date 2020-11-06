@@ -1,0 +1,52 @@
+.title-bar-title {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+button#open {
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+button#close {
+  background-color: transparent;
+  border: transparent;
+}
+button span {
+  color: white;
+}
+
+.off-canvas {
+  background-color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 15vh;
+}
+.off-canvas.position-top {
+  width: 100vw;
+}
+
+.menu {
+  height: auto;
+  width: auto;
+  padding: 3%;
+}
+.menu a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 1.5rem;
+  display: inline-flex;
+}
+.menu a span {
+  margin-right: 5%;
+}
+
+.off-canvas-content.is-open-top.has-transition-push.has-position-top {
+  transform: translateY(8vh);
+}
+
+/*# sourceMappingURL=exercise.module.css.map */

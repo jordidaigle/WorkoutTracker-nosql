@@ -28,31 +28,44 @@
   <link rel="stylesheet" href="../styles/index.module.css" />
 
 
-  <title>Fitness Tracker</title>
+  <title>Track My Workout</title>
 </head>
 
 <body>
 
 
-<!-- Off-Canvas Element/Drawer Menu -->
+  <!-- Off-Canvas Element/Drawer Menu (wraps around general page content) -->
 
-<!-- Open Button -->
-  <button type="button" class="button open" data-toggle="offCanvas">Open Menu</button>
+  <!-- Open Button -->
+
+
+  <div class="title-bar">
+    <div class="title-bar-left">
+      <button type="button" class="button" id="open" data-toggle="offCanvas">
+        <span class="material-icons">calendar_view_day</span>
+      </button>
+      <span class="title-bar-title">Track My Workout</span>
+    </div>
+  </div>
 
   <!-- Drawer -->
-  <div class="off-canvas position-left" id="offCanvas" data-off-canvas> 
+  <div class="off-canvas position-top" id="offCanvas" data-off-canvas>
 
     <!-- Close Button -->
-    <button class="close-button" aria-label="Close menu" type="button" data-close>
+    <button class="close-button" id="close" aria-label="close menu" type="button" data-close>
       <span aria-hidden="true">&times;</span>
     </button>
 
     <!-- Menu -->
-    <nav class="menu">
-      <a class="item active" href="/">
+    <nav class="vertical menu">
+      <a class="item active" href="/"><span class="material-icons">
+          stacked_line_chart
+        </span>
         Tracker
       </a>
-      <a class="item" href="/stats">
+      <a class="item" href="/stats"><span class="material-icons">
+          dashboard
+        </span>
         Dashboard
       </a>
     </nav>
@@ -60,13 +73,18 @@
   </div>
 
 
-
+  <!-- Start of the page content inside the Off-Canvas Menu -->
   <div class="off-canvas-content" data-off-canvas-content>
 
+    <!-- Main Page Content -->
     <div class="wrapper workout">
+
+      <!-- Quote/Header -->
       <header>
-        <h1>Fitness Tracker</h1>
+        <h1>"What gets measured, gets managed"</h1>
       </header>
+
+      <!-- Last Workout card -->
       <div class="container workout">
         <div class="raised card m-auto">
           <div class="prev-workout">
@@ -85,12 +103,84 @@
         </div>
       </div>
     </div>
+
+    <!-- Timer Section -->
+
+    <div class='timer-container'>
+
+      <form>
+        <input type="button" value="Start count!" onclick="doTimer()" />
+        <div type="text" id="timer">
+        <span id="minutes">00</span>
+        :<span id="seconds">00</span>
+        :<span id="milliseconds">00</span>
+        </div>
+        <input type="button" value="Stop count!" onclick="stopCount()" />
+        <input type="button" value="Reset Timer" onclick="resetCount()" />
+      </form>
+    </div>
+
+  <!-- Closing Tag for Menu Drawer -->
   </div>
+
+  <!-- Toast -->
   <div id="toast">
     Workout Added Successfully!
   </div>
 
-  </div>
+  <!-- Timer Script -->
+
+  <script type="text/javascript">
+    let m=0;
+    let s=0;
+    let ms=0;
+    let t;
+    let t2;
+    let timer_is_on=0;
+
+
+    function timedCount() {
+      document.getElementById('minutes').innerHTML=m;
+      document.getElementById('seconds').innerHTML=s;
+
+      // Increment minutes
+      (s===9)? m=m+1:m=m;
+      // Increment seconds
+      s=s+1;
+      (s===10)? s=0:s=s;
+      t=setTimeout("timedCount()",1000);
+    }
+
+    function timedCountMS() {
+      document.getElementById('milliseconds').innerHTML=ms;
+      ms=ms+1;
+      (ms===100)? ms=00:ms=ms;
+      t2=setTimeout("timedCountMS()",10);
+    }
+
+    function doTimer() {
+      if(!timer_is_on) {
+        timer_is_on=1;
+        timedCount();
+        timedCountMS();
+      }
+    }
+
+    function stopCount() {
+      clearTimeout(t);
+      clearTimeout(t2);
+      timer_is_on=0;
+    }
+
+    function resetCount() {
+      m=0;
+      s=0;
+      ms=0;
+      document.getElementById('minutes').innerHTML="00";
+      document.getElementById('seconds').innerHTML="00";
+      document.getElementById('milliseconds').innerHTML="00";
+    }
+  </script>
 
 
 

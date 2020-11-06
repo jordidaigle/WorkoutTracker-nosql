@@ -1,3 +1,11 @@
 $main-font: "Montserrat", sans-serif;
 $sec-font: "Fira Sans", sans-serif;
 
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }

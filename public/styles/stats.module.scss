@@ -1,9 +1,9 @@
 $main-font: "Montserrat", sans-serif;
 $sec-font: "Fira Sans", sans-serif;
 
-body {
-  background-color: black;
-}
+// body {
+//   background-color: black;
+// }
 // Navigation Bar
 .title-bar-title {
   font-family: $sec-font;
@@ -64,16 +64,4 @@ button {
 //Movment of Main Page when menu is opened
 .off-canvas-content.is-open-top.has-transition-push.has-position-top {
   transform: translateY(8vh);
-}
-
-// Title/Quote for Main Page
-header {
-  margin: 0;
-
-  h1 {
-    color: white;
-    font-family: $main-font;
-    font-weight: 400;
-    font-size: 2rem;
-  }
 }

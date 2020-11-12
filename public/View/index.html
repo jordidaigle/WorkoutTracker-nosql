@@ -17,6 +17,11 @@
     integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA=="
     crossorigin="anonymous">
 
+  <!-- Material Design (intended for later use)
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
+
+
   <!-- Compressed JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js"
     integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw=="
@@ -84,43 +89,45 @@
         <h1>"What gets measured, gets managed"</h1>
       </header>
 
+      <!-- Timer Section -->
+      <div class='timer-container'>
+
+        <form class="timer-form">
+          <h2>Timer</h2>
+          <div class="button-row">
+            <input type="button" class="button btn" id="start-btn" value="Start"  onclick="doTimer()"/>
+            <input type="button" class="button btn" id="stop-btn" value="Stop" onclick="stopCount()" />
+            <input type="button" class="button btn" id="reset-btn" value="Reset" onclick="resetCount()" />
+          </div>
+          <div type="text" id="timer">
+            <span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span>
+          </div>
+        </form>
+      </div>
+
       <!-- Last Workout card -->
       <div class="container workout">
         <div class="raised card m-auto">
           <div class="prev-workout">
-            <h3>Last Workout</h3>
+            <h3>Current Workout</h3>
             <div>
               <div class="workout-stats"></div>
               <div class="buttons">
-                <a id="continue-btn" href="/exercise?" class="huge button">Continue Workout</a>
+                <a id="continue-btn" href="/exercise?" class="huge button">Add an exercise</a>
                 <a href="/exercise" class="huge button">New Workout</a>
               </div>
             </div>
           </div>
           <div class="new-workout">
-            <h3>Create Your First Workout</h3>
+            <!-- <h3>Create Your First Workout</h3> -->
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Timer Section -->
 
-    <div class='timer-container'>
 
-      <form>
-        <input type="button" value="Start count!" onclick="doTimer()" />
-        <div type="text" id="timer">
-        <span id="minutes">00</span>
-        :<span id="seconds">00</span>
-        :<span id="milliseconds">00</span>
-        </div>
-        <input type="button" value="Stop count!" onclick="stopCount()" />
-        <input type="button" value="Reset Timer" onclick="resetCount()" />
-      </form>
-    </div>
-
-  <!-- Closing Tag for Menu Drawer -->
+    <!-- Closing Tag for Menu Drawer -->
   </div>
 
   <!-- Toast -->
@@ -195,6 +202,8 @@
   <script src="../api.js"></script>
   <script src="../js/workout.js"></script>
   <script src="../js/index.js"></script>
+
+  
 </body>
 
 </html>

@@ -23,7 +23,8 @@ Requirements:
 ## User Flow
 
 A user can use the timer function on the landing page
-[Screenshot]
+<img src="public/assets/Screen Shot 2020-12-03 at 3.46.27 PM.png" style=" width:100px ; height:100px " />
+
 
 
 Can also choose inputs for theri current workout
@@ -31,7 +32,6 @@ Can also choose inputs for theri current workout
 
 And can see their progress over a week
 [Screenshot]
-
 
 ## Deployed At
 

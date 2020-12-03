@@ -8,6 +8,31 @@
 
 A consumer will reach their fitness goals quicker when they track their workout progress.
 
+## Requirements
+
+The application's purpose is to provide metrics and tracking of your consistency of workouts.
+Requirements:
+
+   Basic data supplied shows what you've done over the last period.
+   Give you sense of what you've done the most of.
+   Allows you to input data about your individual workouts.
+   Gives you a timer for during your workout.
+   Shows you your last workout
+   Simple, sleek design
+
+## User Flow
+
+A user can use the timer function on the landing page
+[Screenshot]
+
+
+Can also choose inputs for theri current workout
+[Screenshot]
+
+And can see their progress over a week
+[Screenshot]
+
+
 ## Deployed At
 
  https://workouttracker-nosql.herokuapp.com/

@@ -8,6 +8,7 @@
 
 A consumer will reach their fitness goals quicker when they track their workout progress.
 
+
 ## Requirements
 
 The application's purpose is to provide metrics and tracking of your consistency of workouts.
@@ -23,15 +24,14 @@ Requirements:
 ## User Flow
 
 A user can use the timer function on the landing page
-<img src="public/assets/Screen Shot 2020-12-03 at 3.46.27 PM.png" style=" width:100px ; height:100px " />
-
-
+<img src="public/assets/Screen Shot 2020-12-03 at 3.46.27 PM.png" style=" width:50px ; height:50px " />
 
 Can also choose inputs for theri current workout
-[Screenshot]
+<img src="public/assets/Screen Shot 2020-12-03 at 3.46.55 PM.png" style=" width:50px ; height:50px " />
 
 And can see their progress over a week
-[Screenshot]
+<img src="public/assets/Screen Shot 2020-12-03 at 4.07.54 PM.png" style=" width:50px ; height:50px " />
+
 
 ## Deployed At
 

@@ -26,7 +26,7 @@ Requirements:
 A user can use the timer function on the landing page
 <img src="public/assets/Screen Shot 2020-12-03 at 3.46.27 PM.png" style=" width:50px ; height:50px " />
 
-Can also choose inputs for theri current workout
+Can also choose inputs for their current workout
 <img src="public/assets/Screen Shot 2020-12-03 at 3.46.55 PM.png" style=" width:50px ; height:50px " />
 
 And can see their progress over a week

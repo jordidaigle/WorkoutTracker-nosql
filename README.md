@@ -32,6 +32,10 @@ Can also choose inputs for their current workout
 And can see their progress over a week
 <img src="public/assets/Screen Shot 2020-12-03 at 4.07.54 PM.png" style=" width:50px ; height:50px " />
 
+## Technologies
+
+Express, path, normalize.css, mongoose, Javascript, HTML, CSS.
+
 
 ## Deployed At
 

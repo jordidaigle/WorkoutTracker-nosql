@@ -100,7 +100,9 @@
             <input type="button" class="button btn" id="reset-btn" value="Reset" onclick="resetCount()" />
           </div>
           <div type="text" id="timer">
-            <span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span>
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>.
+            <span id="milliseconds">00</span>
           </div>
         </form>
       </div>
@@ -108,9 +110,7 @@
       <!-- Last Workout card -->
       <div class="container workout">
         <div class="raised card m-auto">
-          <div class="prev-workout">
-            <h3>Current Workout</h3>
-            <div>
+            <h3 class="prev-workout">Current Workout</h3>
               <div class="workout-stats"></div>
               <div class="buttons">
                 <a id="continue-btn" href="/exercise?" class="huge button">Add an exercise</a>
@@ -138,31 +138,31 @@
   <!-- Timer Script -->
 
   <script type="text/javascript">
-    let m=0;
-    let s=0;
-    let ms=0;
-    let t;
-    let t2;
+    let minutes=0;
+    let seconds=0;
+    let milliseconds=0;
+    let timeInterval;
+    let timeInterval2;
     let timer_is_on=0;
 
 
     function timedCount() {
-      document.getElementById('minutes').innerHTML=m;
-      document.getElementById('seconds').innerHTML=s;
+      document.getElementById('minutes').innerHTML=minutes;
+      document.getElementById('seconds').innerHTML=seconds;
 
       // Increment minutes
-      (s===9)? m=m+1:m=m;
+      (seconds===9) ? minutes=minutes+1 : minutes=minutes;
       // Increment seconds
-      s=s+1;
-      (s===10)? s=0:s=s;
-      t=setTimeout("timedCount()",1000);
+      seconds=seconds+1;
+      (seconds===10) ? seconds=0 : seconds = seconds;
+      timeInterval=setTimeout("timedCount()",1000);
     }
 
     function timedCountMS() {
-      document.getElementById('milliseconds').innerHTML=ms;
-      ms=ms+1;
-      (ms===100)? ms=00:ms=ms;
-      t2=setTimeout("timedCountMS()",10);
+      document.getElementById('milliseconds').innerHTML=milliseconds;
+      milliseconds=milliseconds+1;
+      (milliseconds===100)? milliseconds=00:milliseconds=milliseconds;
+      timeInterval2=setTimeout("timedCountMS()",10);
     }
 
     function doTimer() {
@@ -174,15 +174,15 @@
     }
 
     function stopCount() {
-      clearTimeout(t);
-      clearTimeout(t2);
+      clearTimeout(timeInterval);
+      clearTimeout(timeInterval2);
       timer_is_on=0;
     }
 
     function resetCount() {
-      m=0;
-      s=0;
-      ms=0;
+      minutes=0;
+      seconds=0;
+      milliseconds=0;
       document.getElementById('minutes').innerHTML="00";
       document.getElementById('seconds').innerHTML="00";
       document.getElementById('milliseconds').innerHTML="00";
